@@ -1,6 +1,5 @@
-#include <SDL.h>
+#include <SDL/SDL.h>
 #include "SDL_opengl.h"
-#include "SDL_video.h"
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
