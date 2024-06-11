@@ -27,7 +27,6 @@ void HelpScreen::render() {
 
 void HelpScreen::handleMouse(int x, int y) {
     // Note que y=0 está no topo da janela e y aumenta para baixo, então precisamos inverter a coordenada y
-    y = 600 - y; // Ajuste para coordenadas de tela
 
     // Coordenadas do botão
     int buttonXStart = -80;
@@ -41,7 +40,6 @@ void HelpScreen::handleMouse(int x, int y) {
 }
 
 void HelpScreen::handleClick(int button, int state, int x, int y) {
-    y = 600 - y;
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && hoverBack) {
         Game::getInstance().setState(GameState::MENU);
     }

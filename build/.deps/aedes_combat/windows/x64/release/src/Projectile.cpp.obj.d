@@ -1,7 +1,4 @@
 {
-    files = {
-        [[src\Projectile.cpp]]
-    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
@@ -33,5 +30,8 @@
             "-external:W0",
             [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
         }
+    },
+    files = {
+        [[src\Projectile.cpp]]
     }
 }

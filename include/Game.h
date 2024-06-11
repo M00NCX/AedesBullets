@@ -6,7 +6,7 @@
 #include "Mouse.h"
 #include "HelpScreen.h"
 
-enum class GameState { MENU, PLAY, HELP };
+enum class GameState { MENU, PLAY, HELP, PAUSE };
 
 class Game {
 private:
@@ -15,15 +15,19 @@ private:
     GameScreen gameScreen;
     HelpScreen helpScreen;
     Mouse mouse;
+    Character character;
 
     Game();
 
 public:
     static Game& getInstance();
     void setState(GameState newState);
+    void togglePause(); // Método para alternar entre pausado e não pausado
     void render();
     void handleMouseMotion(int x, int y);
     void handleMouseClick(int button, int state, int x, int y);
+    void handleKeyPress(unsigned char key, int x, int y); // Método para tratar teclas de atalho
+    Character& getCharacter();
 };
 
 #endif // GAME_H

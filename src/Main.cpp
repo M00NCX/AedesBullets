@@ -1,5 +1,6 @@
 #include <GL/glut.h>
 #include "Game.h"
+#include <iostream>
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -14,6 +15,32 @@ void passiveMotion(int x, int y) {
 
 void mouse(int button, int state, int x, int y) {
     Game::getInstance().handleMouseClick(button, state, x, y);
+    glutPostRedisplay();
+}
+
+void keyboard(unsigned char key, int x, int y) {
+    float distance = 10.0f; // Distância que o personagem vai se mover
+    switch (key) {
+        case 27: // ESC key
+            Game::getInstance().togglePause();
+            break;
+        case 'w':
+        case 'W':
+            Game::getInstance().getCharacter().moveUp(distance);
+            break;
+        case 's':
+        case 'S':
+            Game::getInstance().getCharacter().moveDown(distance);
+            break;
+        case 'a':
+        case 'A':
+            Game::getInstance().getCharacter().moveLeft(distance);
+            break;
+        case 'd':
+        case 'D':
+            Game::getInstance().getCharacter().moveRight(distance);
+            break;
+    }
     glutPostRedisplay();
 }
 
@@ -40,6 +67,7 @@ int main(int argc, char** argv) {
     glutDisplayFunc(display);
     glutPassiveMotionFunc(passiveMotion);
     glutMouseFunc(mouse);
+    glutKeyboardFunc(keyboard); // Adicionar manipulador de teclado
 
     glutMainLoop();
     return 0;

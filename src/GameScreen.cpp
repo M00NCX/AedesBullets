@@ -15,8 +15,5 @@ void GameScreen::render() {
     glTexCoord2f(0, 0); glVertex2f(0, 600);
     glEnd();
     glDisable(GL_TEXTURE_2D);
-
-    // Renderiza o personagem com a pose atual
-    character.render(1); // Renderiza a primeira pose do personagem
     
 }
