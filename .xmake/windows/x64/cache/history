@@ -5,8 +5,6 @@
         "xmake ",
         "xmake ",
         "xmake ",
-        "xmake ",
-        "xmake ",
         [[xmake l c:\Users\vinic\.vscode\extensions\tboox.xmake-vscode-2.3.5\assets\explorer.lua]],
         [[xmake l c:\Users\vinic\.vscode\extensions\tboox.xmake-vscode-2.3.5\assets\explorer.lua]],
         "xmake ",
@@ -64,6 +62,8 @@
         "xmake ",
         "xmake ",
         "xmake ",
-        "xmake "
+        "xmake ",
+        [[xmake l c:\Users\vinic\.vscode\extensions\tboox.xmake-vscode-2.3.5\assets\explorer.lua]],
+        [[xmake l c:\Users\vinic\.vscode\extensions\tboox.xmake-vscode-2.3.5\assets\config.lua]]
     }
 }
