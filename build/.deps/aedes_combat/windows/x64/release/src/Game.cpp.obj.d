@@ -194,12 +194,17 @@
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\initializer_list\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\cctype\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\mouse.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gamescreen.h\"\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gamescreen.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\character.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\helpscreen.h\"\
         ],\
         \"ImportedModules\": [],\
         \"ImportedHeaderUnits\": []\
     }\
 }",
+    files = {
+        [[src\Game.cpp]]
+    },
     values = {
         [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
         {
@@ -221,8 +226,5 @@
             "-external:W0",
             [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
         }
-    },
-    files = {
-        [[src\Game.cpp]]
     }
 }

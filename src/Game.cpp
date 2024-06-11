@@ -19,6 +19,9 @@ void Game::render() {
         case GameState::PLAY:
             gameScreen.render();
             break;
+        case GameState::HELP:
+            helpScreen.render();
+            break;
     }
 }
 
@@ -30,6 +33,9 @@ void Game::handleMouseMotion(int x, int y) {
             break;
         case GameState::PLAY:
             // Lógica para o jogo
+            break;
+        case GameState::HELP:
+            helpScreen.render();
             break;
     }
 }
@@ -45,6 +51,10 @@ void Game::handleMouseClick(int button, int state, int x, int y) {
             case GameState::PLAY:
                 // Lógica para o jogo
                 break;
+            case GameState::HELP:
+                helpScreen.render();
+                break;
         }
     }
 }
+

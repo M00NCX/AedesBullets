@@ -1,10 +1,16 @@
 {
     files = {
+        [[build\.objs\aedes_combat\windows\x64\release\src\Character.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Game.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\GameScreen.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\HelpScreen.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Keyboard.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Main.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Player.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Projectile.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Sprite.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Teclado.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Tela.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]

@@ -2,6 +2,7 @@
 #define GAMESCREEN_H
 
 #include "Texture.h"
+#include "Character.h"
 
 class GameScreen {
 public:
@@ -9,6 +10,7 @@ public:
     void render();
 private:
     Texture background;
+    Character character;
 };
 
 #endif

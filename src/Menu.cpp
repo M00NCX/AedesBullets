@@ -38,7 +38,8 @@ void Menu::handleClick(Mouse& mouse) {
         // Muda para a tela de jogo
         Game::getInstance().setState(GameState::PLAY);
     } else if (hoverHelp) {
-        // Lógica para tela de ajuda
+        // Muda para a tela de jogo
+        Game::getInstance().setState(GameState::HELP);
     } else if (hoverExit) {
         // Sai do jogo
         exit(0);

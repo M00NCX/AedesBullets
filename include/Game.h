@@ -4,14 +4,16 @@
 #include "Menu.h"
 #include "GameScreen.h"
 #include "Mouse.h"
+#include "HelpScreen.h"
 
-enum class GameState { MENU, PLAY };
+enum class GameState { MENU, PLAY, HELP };
 
 class Game {
 private:
     GameState state;
     Menu menu;
     GameScreen gameScreen;
+    HelpScreen helpScreen;
     Mouse mouse;
 
     Game();
