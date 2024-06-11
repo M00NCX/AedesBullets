@@ -5,12 +5,11 @@
 
 class Mosquito {
 public:
-    Texture spriteSheet;
-    float x, y;
-
-    Mosquito(float startX, float startY);
-    void render();
-    void update(float deltaTime);
+    Mosquito();
+    void render(int pose); // Renderiza o personagem com a pose especificada
+private:
+    Texture spriteSheet; // Textura contendo todas as poses do personagem
+    float x, y; // Posição do personagem
 };
 
-#endif // MOSQUITO_H
+#endif

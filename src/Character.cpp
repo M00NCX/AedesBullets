@@ -45,3 +45,5 @@ void Character::moveRight(float distance) {
         x += distance;
     }
 }
+
+

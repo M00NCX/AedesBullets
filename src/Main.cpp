@@ -19,6 +19,7 @@ void mouse(int button, int state, int x, int y) {
 }
 
 void keyboard(unsigned char key, int x, int y) {
+    std::cout << "Key pressed: " << key << std::endl;
     float distance = 10.0f; // Distância que o personagem vai se mover
     switch (key) {
         case 27: // ESC key

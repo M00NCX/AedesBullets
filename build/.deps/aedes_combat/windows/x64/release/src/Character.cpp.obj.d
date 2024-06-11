@@ -1,4 +1,7 @@
 {
+    files = {
+        [[src\Character.cpp]]
+    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
@@ -227,9 +230,6 @@
         \"ImportedHeaderUnits\": []\
     }\
 }",
-    files = {
-        [[src\Character.cpp]]
-    },
     values = {
         [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
         {

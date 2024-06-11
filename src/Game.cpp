@@ -26,7 +26,8 @@ void Game::render() {
             break;
         case GameState::PLAY:
             gameScreen.render();
-            character.render(0); // Renderizar o personagem na pose 0 (ajustar conforme necessário)
+            character.render(0);
+            mosquito.render(0); // Renderizar o personagem na pose 0 (ajustar conforme necessário)
             break;
         case GameState::HELP:
             helpScreen.render();

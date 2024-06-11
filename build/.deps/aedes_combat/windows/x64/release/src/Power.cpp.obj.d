@@ -1,4 +1,7 @@
 {
+    files = {
+        [[src\Power.cpp]]
+    },
     values = {
         [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
         {
@@ -21,17 +24,13 @@
             [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
         }
     },
-    files = {
-        [[src\Game.cpp]]
-    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
-        \"Source\": \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\src\\\\game.cpp\",\
+        \"Source\": \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\src\\\\power.cpp\",\
         \"ProvidedModule\": \"\",\
         \"Includes\": [\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\game.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\menu.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\power.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\texture.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gl\\\\glut.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gl\\\\freeglut_std.h\",\
@@ -217,13 +216,7 @@
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\__msvc_iter_core.hpp\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\utility\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\initializer_list\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\cctype\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\mouse.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gamescreen.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\character.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\mosquito.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\helpscreen.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\mosquitomanager.h\"\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\cctype\"\
         ],\
         \"ImportedModules\": [],\
         \"ImportedHeaderUnits\": []\

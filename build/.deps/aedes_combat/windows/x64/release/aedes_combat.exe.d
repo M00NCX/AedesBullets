@@ -7,8 +7,9 @@
         [[build\.objs\aedes_combat\windows\x64\release\src\Main.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\MosquitoManager.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Projectile.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Shot.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]
     },
     values = {

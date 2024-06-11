@@ -3,6 +3,7 @@
 
 #include "Texture.h"
 #include "Character.h"
+#include "Mosquito.h"
 
 class GameScreen {
 public:
@@ -11,6 +12,7 @@ public:
 private:
     Texture background;
     Character character;
+    Mosquito mosquito;
 };
 
 #endif

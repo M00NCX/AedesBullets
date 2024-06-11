@@ -5,6 +5,7 @@
 #include "GameScreen.h"
 #include "Mouse.h"
 #include "HelpScreen.h"
+#include "MosquitoManager.h"
 
 enum class GameState { MENU, PLAY, HELP, PAUSE };
 
@@ -16,6 +17,7 @@ private:
     HelpScreen helpScreen;
     Mouse mouse;
     Character character;
+    Mosquito mosquito;
 
     Game();
 
