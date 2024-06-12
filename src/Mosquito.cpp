@@ -9,7 +9,7 @@ void Mosquito::render(int pose) {
     float poseHeight = 1.0f;
     float poseOffset = pose * poseWidth;
 
-    // Renderiza a pose específica do personagem
+    // Renderiza a pose específica do mosquito
     glColor3f(1.0f, 1.0f, 1.0f);
     glEnable(GL_TEXTURE_2D);
     spriteSheet.bind();
@@ -21,4 +21,17 @@ void Mosquito::render(int pose) {
     glEnd();
     glDisable(GL_TEXTURE_2D);
 }
+
+void Mosquito::movimentacao(float distance) {
+    for (size_t i = 0; i < count; i++)
+    {
+        /* code */
+    }
+    
+    if (y + distance <= 600 - y + 200) {
+        y += distance;
+    }
+}
+
+
 
