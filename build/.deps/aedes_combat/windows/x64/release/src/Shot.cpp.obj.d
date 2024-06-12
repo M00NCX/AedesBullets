@@ -2,25 +2,47 @@
     files = {
         [[src\Shot.cpp]]
     },
+    values = {
+        [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64\cl.exe]],
+        {
+            "-nologo",
+            "-Iinclude",
+            "-DFREEGLUT_STATIC=1",
+            "-DFREEGLUT_LIB_PRAGMAS=0",
+            "-DGLEW_NO_GLU",
+            "-DGLEW_STATIC",
+            "/EHsc",
+            "-external:W0",
+            [[-external:IC:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]],
+            "-external:W0",
+            [[-external:IC:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
+            "-external:W0",
+            [[-external:IC:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]],
+            "-external:W0",
+            [[-external:IC:\Users\dry_2\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]],
+            "-external:W0",
+            [[-external:IC:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
+        }
+    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
-        \"Source\": \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\src\\\\shot.cpp\",\
+        \"Source\": \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\src\\\\shot.cpp\",\
         \"ProvidedModule\": \"\",\
         \"Includes\": [\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\shot.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gl\\\\glut.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gl\\\\freeglut_std.h\",\
+            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\shot.h\",\
+            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\gl\\\\glut.h\",\
+            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\gl\\\\freeglut_std.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\um\\\\windows.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\winapifamily.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\winpackagefamily.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\sdkddkver.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\excpt.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\vcruntime.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\sal.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\concurrencysal.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\vadefs.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\stdarg.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\excpt.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\vcruntime.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\sal.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\concurrencysal.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\vadefs.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\stdarg.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\windef.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\minwindef.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\specstrings.h\",\
@@ -39,7 +61,7 @@
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_memory.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_memcpy_s.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\errno.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\vcruntime_string.h\",\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\vcruntime_string.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_wstring.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\pshpack4.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\shared\\\\poppack.h\",\
@@ -132,39 +154,17 @@
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\um\\\\mcx.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\um\\\\imm.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\um\\\\ime_cmodes.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gl\\\\gl.h\",\
+            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\gl\\\\gl.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\stddef.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedes combat\\\\include\\\\gl\\\\glu.h\",\
+            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\gl\\\\glu.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\stdlib.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_malloc.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_search.h\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_wstdlib.h\",\
-            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\limits.h\"\
+            \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\limits.h\"\
         ],\
         \"ImportedModules\": [],\
         \"ImportedHeaderUnits\": []\
     }\
-}",
-    values = {
-        [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
-        {
-            "-nologo",
-            "-Iinclude",
-            "-DFREEGLUT_STATIC=1",
-            "-DFREEGLUT_LIB_PRAGMAS=0",
-            "-DGLEW_NO_GLU",
-            "-DGLEW_STATIC",
-            "/EHsc",
-            "-external:W0",
-            [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]],
-            "-external:W0",
-            [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
-            "-external:W0",
-            [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]],
-            "-external:W0",
-            [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]],
-            "-external:W0",
-            [[-external:IC:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
-        }
-    }
+}"
 }
