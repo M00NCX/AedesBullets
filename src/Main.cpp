@@ -49,6 +49,9 @@ void keyboard(unsigned char key, int x, int y)
     case 'D':
         character.moveRight(distance, map);
         break;
+    case 'g':
+    case 'G':
+        character.getPoints(map);
     }
     glutPostRedisplay();
 }

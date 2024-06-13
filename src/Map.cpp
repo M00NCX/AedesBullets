@@ -23,8 +23,10 @@ void Map::loadMap(const std::string& filename) {
             BlockType blockType;
             if (blockChar == '0') {
                 blockType = BlockType::SOLID;
-            } else {
-                blockType = BlockType::EMPTY;
+            } else if (blockChar == '1') {
+                    blockType = BlockType::EMPTY;
+            } else if (blockChar == '2') {
+                    blockType = BlockType::FOCO;
             }
             row.push_back(blockType);
         }
@@ -70,6 +72,21 @@ bool Map::checkCollisionWithMap(float x, float y) const {
     return map[mapY][mapX] == BlockType::SOLID;
 }
 
+bool Map::checkFocoWithMap(float x, float y) const {
+    int mapX = static_cast<int>(x / blockSize);
+    int mapY = static_cast<int>(y / blockSize);
+
+    // Check if the coordinates are within the map boundaries
+    if (mapX < 0 || mapX >= mapWidth || mapY < 0 || mapY >= mapHeight) {
+        return false; // Out of bounds is not a foco
+    }
+
+    // Check if the block is a Foco de dengue
+    if (map[mapY][mapX] == BlockType::FOCO) {
+        return true;
+    }
+}
+
 int Map::getWidth() const {
     return mapWidth * blockSize;
 }
@@ -82,5 +99,5 @@ BlockType Map::getBlockType(int x, int y) const {
     if (x >= 0 && x < mapWidth && y >= 0 && y < mapHeight) {
         return map[y][x];
     }
-    return BlockType::EMPTY; // Return EMPTY for out of bounds, could also throw an exception or handle it differently
+    //return BlockType::EMPTY; // Return EMPTY for out of bounds, could also throw an exception or handle it differently
 }

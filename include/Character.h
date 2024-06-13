@@ -28,11 +28,14 @@ public:
     float getWidth() const { return width; }
     float getHeight() const { return height; }
     int getLives() const { return lives; }
+    void getPoints(const Map &map);
+    int showPoints() const { return points; }
 
     // Métodos estáticos para obter screenWidth e screenHeight
     static float getScreenWidth();
     static float getScreenHeight();
-    void resetLives(); // Método para reiniciar as vidas do personagem
+    void resetLives(); // Método para reiniciar as vidas do 
+    void resetPoints();
 
 private:
     // Sprite sheet texture for the character
@@ -51,7 +54,9 @@ private:
 
     // Helper function to check collision with the map
     bool isCollision(float newX, float newY, const Map &map);
+    bool isFoco(float X, float Y, const Map &map);
     int lives;
+    int points;
 };
 
 #endif // CHARACTER_H

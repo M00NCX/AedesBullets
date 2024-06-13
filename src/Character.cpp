@@ -1,7 +1,7 @@
 #include "Character.h"
 #include <iostream>
 
-Character::Character() : spriteSheet("./img/Goku2.png"), x(100.0f), y(110.0f), lives(3) {}
+Character::Character() : spriteSheet("./img/Goku2.png"), x(100.0f), y(85.0f), lives(3) {}
 
 void Character::render(int pose)
 {
@@ -77,6 +77,15 @@ void Character::moveRight(float distance, const Map &map)
     {
         std::cout << "Warning: Collision detected moving right!" << std::endl;
     }
+    if (isFoco(x, y, map)) {
+            std::cerr << "Warning: Character stepped on a foco!\n";
+        }
+}
+
+void Character::getPoints(const Map &map){
+    if (isFoco(x, y, map)){
+        points += 10;
+    }
 }
 
 bool Character::isCollision(float newX, float newY, const Map &map)
@@ -87,6 +96,16 @@ bool Character::isCollision(float newX, float newY, const Map &map)
            map.checkCollisionWithMap(newX, newY + height) ||
            map.checkCollisionWithMap(newX + width, newY + height);
 }
+
+bool Character::isFoco(float X, float Y, const Map &map)
+{
+    // Check corners of the character's bounding box
+    return map.checkFocoWithMap(X, Y) ||
+           map.checkFocoWithMap(X + width, Y) ||
+           map.checkFocoWithMap(X, Y + height) ||
+           map.checkFocoWithMap(X + width, Y + height);
+}
+
 float Character::getScreenWidth()
 {
     return screenWidth;
@@ -105,4 +124,8 @@ void Character::loseLife()
 void Character::resetLives()
 {
     lives = 3; // Defina MAX_LIVES conforme necessário
+}
+
+void Character::resetPoints() {
+    points = 0;
 }
