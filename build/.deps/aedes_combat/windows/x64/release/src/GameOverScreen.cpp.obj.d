@@ -1,15 +1,11 @@
 {
-    files = {
-        [[src\Game.cpp]]
-    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
-        \"Source\": \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\src\\\\game.cpp\",\
+        \"Source\": \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\src\\\\gameoverscreen.cpp\",\
         \"ProvidedModule\": \"\",\
         \"Includes\": [\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\game.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\menu.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gameoverscreen.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\texture.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gl\\\\glut.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gl\\\\freeglut_std.h\",\
@@ -196,6 +192,8 @@
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\utility\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\initializer_list\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\cctype\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\game.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\menu.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\mouse.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gamescreen.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\character.h\",\
@@ -236,13 +234,15 @@
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\vector\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\__msvc_bit_utils.hpp\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\mosquito.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\helpscreen.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gameoverscreen.h\"\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\helpscreen.h\"\
         ],\
         \"ImportedModules\": [],\
         \"ImportedHeaderUnits\": []\
     }\
 }",
+    files = {
+        [[src\GameOverScreen.cpp]]
+    },
     values = {
         [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
         {

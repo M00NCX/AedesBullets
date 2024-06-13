@@ -5,6 +5,7 @@
 #include "GameScreen.h"
 #include "Mouse.h"
 #include "HelpScreen.h"
+#include "GameOverScreen.h"
 #include "Map.h"
 #include "Mosquito.h" // Certifique-se de incluir o cabeçalho correto do Mosquito
 
@@ -13,7 +14,8 @@ enum class GameState
     MENU,
     PLAY,
     HELP,
-    PAUSE
+    PAUSE,
+    GAMEOVER
 };
 
 class Game
@@ -23,6 +25,7 @@ private:
     Menu menu;
     GameScreen gameScreen;
     HelpScreen helpScreen;
+    GameOverScreen gameOverScreen;
     Mouse mouse;
     Character character;
     Mosquito mosquito;

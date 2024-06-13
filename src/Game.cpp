@@ -58,7 +58,7 @@ void Game::render()
             if (character.getLives() <= 0)
             {
                 // Aqui você pode implementar a lógica de game over
-                setState(GameState::MENU); // Volta para o menu após o game over
+                setState(GameState::GAMEOVER); // Volta para o menu após o game over
             }
         }
 
@@ -94,6 +94,11 @@ void Game::render()
         break;
     case GameState::PAUSE:
         helpScreen.render(); // Renderizar o fundo do jogo
+        // Aqui, adicione a renderização do menu de pausa
+        // pauseMenu.render();
+        break;
+    case GameState::GAMEOVER:
+        gameOverScreen.render(); // Renderizar o fundo do jogo
         // Aqui, adicione a renderização do menu de pausa
         // pauseMenu.render();
         break;
