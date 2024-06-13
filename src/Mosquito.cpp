@@ -68,8 +68,8 @@ void Mosquito::setVisible(bool visible)
 bool Mosquito::checkCollision(float x, float y, float width, float height)
 {
     // Dimensões da imagem do mosquito (ajustar conforme necessário)
-    float mosquitoWidth = 20.0f;
-    float mosquitoHeight = 20.0f;
+    float mosquitoWidth = 15.0f;
+    float mosquitoHeight = 15.0f;
 
     // Limites do mosquito na tela
     float myLeft = this->x;

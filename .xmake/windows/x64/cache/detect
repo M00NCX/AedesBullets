@@ -1,39 +1,42 @@
 {
-    find_programver = {
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe"] = false
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]]
-    },
-    find_program_fetch_package_xmake = {
-        cmake = false
-    },
-    find_program_fetch_package_system = {
-        cmake = [[C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]]
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolld = {
-        ["link.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\link.exe]]
-    },
     find_package_windows_x64_fetch_package_xmake = {
-        ["xmake::stb_1e9afa0be82a4afeaeaa89283f7b4e4d_release_2023.12.15_external"] = {
-            sysincludedirs = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]]
+        ["xmake::glew_6a8fc1e310a44318beb712a418386242_release_2.2.0_external"] = {
+            static = true,
+            libfiles = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib\glew32s.lib]]
             },
-            version = "2023.12.15"
+            defines = {
+                "GLEW_NO_GLU",
+                "GLEW_STATIC"
+            },
+            syslinks = "opengl32",
+            version = "2.2.0",
+            linkdirs = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]]
+            },
+            links = {
+                "glew32s"
+            },
+            sysincludedirs = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
+            }
+        },
+        ["xmake::stb_1e9afa0be82a4afeaeaa89283f7b4e4d_release_2023.12.15_external"] = {
+            version = "2023.12.15",
+            sysincludedirs = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]]
+            }
         },
         ["xmake::miniaudio_08eaa467bf644effb19c903e8c4ac2d4_release_0.11.21_external"] = {
+            version = "0.11.21",
             sysincludedirs = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]]
-            },
-            version = "0.11.21"
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]]
+            }
         },
         ["xmake::freeglut_9e1e9a63d6b948868b158c0a7189e4ed_release_v3.4.0_external"] = {
-            static = true,
-            version = "v3.4.0",
-            license = "MIT",
-            sysincludedirs = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]]
+            libfiles = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib\freeglut_static.lib]]
             },
             syslinks = {
                 "gdi32",
@@ -41,61 +44,57 @@
                 "user32",
                 "advapi32"
             },
+            version = "v3.4.0",
             linkdirs = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]]
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]]
             },
             links = {
                 "freeglut_static"
             },
-            libfiles = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib\freeglut_static.lib]]
+            license = "MIT",
+            static = true,
+            sysincludedirs = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]]
             },
             defines = {
                 "FREEGLUT_STATIC=1",
                 "FREEGLUT_LIB_PRAGMAS=0"
             }
-        },
-        ["xmake::glew_6a8fc1e310a44318beb712a418386242_release_2.2.0_external"] = {
-            static = true,
-            version = "2.2.0",
-            links = {
-                "glew32s"
-            },
-            libfiles = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib\glew32s.lib]]
-            },
-            defines = {
-                "GLEW_NO_GLU",
-                "GLEW_STATIC"
-            },
-            linkdirs = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]]
-            },
-            syslinks = "opengl32",
-            sysincludedirs = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
-            }
         }
     },
     find_program = {
         unzip = false,
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
-        zig = false,
+        gzip = false,
         git = "git",
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
-        tar = "tar",
-        gzip = "gzip",
+        ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\cl.exe]],
         nim = false,
-        ["7z"] = [[C:\Users\vinic\xmake\winenv\bin\7z]]
+        ["7z"] = [[C:\Program Files\xmake\winenv\bin\7z]],
+        zig = false,
+        ["cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\cl.exe]]
     },
-    find_program_msvc_arch_x64_plat_windows_checktoolcc = {
-        ["cl.exe"] = [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]]
+    find_program_msvc_arch_x64_plat_windows_checktoolld = {
+        ["link.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe]]
+    },
+    find_program_fetch_package_system = {
+        cmake = [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake]]
+    },
+    find_programver = {
+        ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe"] = false
     },
     find_programver_fetch_package_system = {
-        ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake"] = "3.28.0-msvc1"
+        ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake"] = "3.20.21032501-MSVC"
+    },
+    find_program_fetch_package_xmake = {
+        cmake = false
+    },
+    find_program_msvc_arch_x64_plat_windows_checktoolcc = {
+        ["cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\cl.exe]]
+    },
+    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
+        ["cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\cl.exe]]
     },
     ["lib.detect.has_flags"] = {
-        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags_-nologo_cl_external_includedir"] = true,
-        ["windows_x64_C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags_-nologo_cl_sourceDependencies"] = true
+        ["windows_x64_C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags_-nologo_cl_external_includedir"] = true,
+        ["windows_x64_C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags_-nologo_cl_sourceDependencies"] = true
     }
 }

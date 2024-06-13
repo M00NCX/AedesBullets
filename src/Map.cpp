@@ -82,9 +82,7 @@ bool Map::checkFocoWithMap(float x, float y) const {
     }
 
     // Check if the block is a Foco de dengue
-    if (map[mapY][mapX] == BlockType::FOCO) {
-        return true;
-    }
+    return map[mapY][mapX] == BlockType::FOCO;
 }
 
 int Map::getWidth() const {
@@ -100,4 +98,13 @@ BlockType Map::getBlockType(int x, int y) const {
         return map[y][x];
     }
     //return BlockType::EMPTY; // Return EMPTY for out of bounds, could also throw an exception or handle it differently
+}
+
+void Map::removeFocoBlock(int x, int y) {
+    if (x >= 0 && x < mapWidth && y >= 0 && y < mapHeight) {
+        if (map[y][x] == BlockType::FOCO) {
+            map[y][x] = BlockType::EMPTY; // Remove block by setting it to EMPTY
+                    std::cout << "Foco ELIMINADO!" << std::endl;
+        }
+    }
 }

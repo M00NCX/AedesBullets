@@ -127,7 +127,7 @@ void Game::render()
             glLoadIdentity();
 
             // Posição para renderizar o número de pontos (por exemplo, canto inferior esquerdo)
-            glRasterPos2i(120, 20); // Ajuste a posição conforme necessário
+            glRasterPos2i(100, 20); // Ajuste a posição conforme necessário
             for (const char &c : pointsText)
             {
                 glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c); // Use a fonte desejada
@@ -138,7 +138,32 @@ void Game::render()
             glPopMatrix();
             glMatrixMode(GL_MODELVIEW);
         }
-        
+
+        // Renderiza o aviso de foco de dengue na tela
+        if (character.isFoco(character.getX(), character.getY(), getMap())){
+            std::string pointsText = "Voce esta sobre um ponto de foco de dengue, pressione G para trata-lo!";
+
+            glColor3f(1.0f, 0.5f, 0.5f); // Cor branca
+            glMatrixMode(GL_PROJECTION);
+            glPushMatrix();
+            glLoadIdentity();
+            gluOrtho2D(0, Character::getScreenWidth(), 0, Character::getScreenHeight()); // Ajuste para usar os métodos estáticos
+            glMatrixMode(GL_MODELVIEW);
+            glPushMatrix();
+            glLoadIdentity();
+
+            // Posição para renderizar o texto (por exemplo, canto inferior esquerdo)
+            glRasterPos2i(205, 20); // Ajuste a posição conforme necessário
+            for (const char &c : pointsText)
+            {
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c); // Use a fonte desejada
+            }
+
+            glPopMatrix();
+            glMatrixMode(GL_PROJECTION);
+            glPopMatrix();
+            glMatrixMode(GL_MODELVIEW);
+        }
         break;
     case GameState::HELP:
         helpScreen.render();
@@ -210,7 +235,7 @@ Character &Game::getCharacter()
     return character;
 }
 
-Map &Game::getMap()
+Map Game::getMap() const
 {
     return map;
 }

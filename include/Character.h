@@ -30,8 +30,9 @@ public:
     float getWidth() const { return width; }
     float getHeight() const { return height; }
     int getLives() const { return lives; }
-    void getPoints(const Map &map);
+    void getPoints(Map &map);
     int showPoints() const { return points; }
+    bool isFoco(float X, float Y, const Map &map);
 
     // Métodos estáticos para obter screenWidth e screenHeight
     static float getScreenWidth();
@@ -52,8 +53,8 @@ private:
     float x, y;
 
     // Character dimensions (adjust as needed)
-    static constexpr float width = 15.0f;
-    static constexpr float height = 20.0f;
+    static constexpr float width = 25.0f;
+    static constexpr float height = 30.0f;
 
     // Screen dimensions (adjust as needed)
     static constexpr float screenWidth = 812.0f;
@@ -61,7 +62,6 @@ private:
 
     // Helper function to check collision with the map
     bool isCollision(float newX, float newY, const Map &map);
-    bool isFoco(float X, float Y, const Map &map);
     int lives;
     int points;
 

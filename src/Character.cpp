@@ -81,13 +81,14 @@ void Character::moveRight(float distance, const Map &map)
     {
         std::cout << "Warning: Collision detected moving right!" << std::endl;
     }
-    if (isFoco(x, y, map)) {
-            std::cerr << "Warning: Character stepped on a foco!\n";
-        }
 }
 
-void Character::getPoints(const Map &map){
-    if (isFoco(x, y, map)){
+void Character::getPoints(Map &map){
+    int mapX = static_cast<int>(x / 14);
+    int mapY = static_cast<int>(y / 14);
+
+    if (isFoco(x, y, map)) {
+        map.removeFocoBlock(mapX, mapY);
         points += 10;
     }
 }
@@ -107,7 +108,7 @@ bool Character::isFoco(float X, float Y, const Map &map)
     return map.checkFocoWithMap(X, Y) ||
            map.checkFocoWithMap(X + width, Y) ||
            map.checkFocoWithMap(X, Y + height) ||
-           map.checkFocoWithMap(X + width, Y + height);
+           map.checkFocoWithMap(X + width, Y + height);;
 }
 
 float Character::getScreenWidth()

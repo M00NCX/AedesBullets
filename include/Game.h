@@ -56,7 +56,7 @@ public:
     Mosquito2 &getMosquito2();
     Mosquito3 &getMosquito3();
     GameState getState() const; // Novo método para acessar o estado do jogo
-    Map &getMap();
+    Map getMap() const;
     void update(); // Novo método para atualizar o jogo
 };
 

@@ -35,6 +35,8 @@ public:
     // Get the block type at a specific position
     BlockType getBlockType(int x, int y) const;
 
+    void removeFocoBlock(int x, int y);
+
 private:
     // 2D vector to store the map
     std::vector<std::vector<BlockType>> map;

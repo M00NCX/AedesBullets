@@ -1,84 +1,84 @@
 {
-    freeglut = {
-        static = true,
-        version = "v3.4.0",
-        license = "MIT",
+    stb = {
+        __enabled = true,
+        sysincludedirs = {
+            [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
+            [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]]
+        },
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d]],
+        version = "2023.12.15",
+        __requirestr = "stb",
         envs = {
             PATH = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\bin]],
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\c\cmake\3.29.2\ae2ca291915949809139117c15e1db8a\bin]],
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glu\latest\b1caf5aecf3447d1bfaf66081135de32\bin]],
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\o\opengl\latest\b1caf5aecf3447d1bfaf66081135de32\bin]]
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\bin]]
+            }
+        }
+    },
+    miniaudio = {
+        __enabled = true,
+        sysincludedirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]],
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4]],
+        version = "0.11.21",
+        __requirestr = "miniaudio",
+        envs = {
+            PATH = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\bin]]
+            }
+        }
+    },
+    glew = {
+        libfiles = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib\glew32s.lib]],
+        syslinks = "opengl32",
+        version = "2.2.0",
+        linkdirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]],
+        links = "glew32s",
+        static = true,
+        __requirestr = "glew",
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242]],
+        sysincludedirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]],
+        defines = {
+            "GLEW_NO_GLU",
+            "GLEW_STATIC"
+        },
+        envs = {
+            PATH = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\bin]]
             }
         },
-        installdir = [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed]],
-        __requirestr = "freeglut",
-        sysincludedirs = [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]],
+        __enabled = true
+    },
+    freeglut = {
+        libfiles = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib\freeglut_static.lib]],
         syslinks = {
             "gdi32",
             "winmm",
             "user32",
             "advapi32"
         },
-        linkdirs = [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]],
+        version = "v3.4.0",
+        linkdirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]],
         links = {
             "freeglut_static",
             "glu32",
             "opengl32"
         },
+        license = "MIT",
+        static = true,
+        __requirestr = "freeglut",
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed]],
+        sysincludedirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]],
         defines = {
             "FREEGLUT_STATIC=1",
             "FREEGLUT_LIB_PRAGMAS=0"
         },
-        libfiles = [[C:\Users\vinic\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib\freeglut_static.lib]],
-        __enabled = true
-    },
-    glew = {
-        static = true,
-        version = "2.2.0",
         envs = {
             PATH = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\bin]]
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\bin]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\c\cmake\3.29.2\ae2ca291915949809139117c15e1db8a\bin]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glu\latest\b1caf5aecf3447d1bfaf66081135de32\bin]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\o\opengl\latest\b1caf5aecf3447d1bfaf66081135de32\bin]]
             }
-        },
-        installdir = [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242]],
-        __requirestr = "glew",
-        sysincludedirs = [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]],
-        syslinks = "opengl32",
-        linkdirs = [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]],
-        links = "glew32s",
-        libfiles = [[C:\Users\vinic\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib\glew32s.lib]],
-        defines = {
-            "GLEW_NO_GLU",
-            "GLEW_STATIC"
         },
         __enabled = true
-    },
-    stb = {
-        version = "2023.12.15",
-        envs = {
-            PATH = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\bin]]
-            }
-        },
-        __enabled = true,
-        installdir = [[C:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d]],
-        __requirestr = "stb",
-        sysincludedirs = {
-            [[C:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
-            [[C:\Users\vinic\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]]
-        }
-    },
-    miniaudio = {
-        version = "0.11.21",
-        envs = {
-            PATH = {
-                [[C:\Users\vinic\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\bin]]
-            }
-        },
-        __enabled = true,
-        installdir = [[C:\Users\vinic\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4]],
-        __requirestr = "miniaudio",
-        sysincludedirs = [[C:\Users\vinic\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]]
     }
 }
