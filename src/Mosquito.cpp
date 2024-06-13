@@ -24,11 +24,11 @@ void Mosquito::render(int pose)
     glTexCoord2f(poseOffset, 1);
     glVertex2f(x, y);
     glTexCoord2f(poseOffset + poseWidth, 1);
-    glVertex2f(x + 100, y); // Supondo uma largura de 100 pixels para o personagem
+    glVertex2f(x + 50, y); // Supondo uma largura de 100 pixels para o personagem
     glTexCoord2f(poseOffset + poseWidth, 0);
-    glVertex2f(x + 100, y + 200); // Supondo uma altura de 200 pixels para o personagem
+    glVertex2f(x + 50, y + 100); // Supondo uma altura de 200 pixels para o personagem
     glTexCoord2f(poseOffset, 0);
-    glVertex2f(x, y + 200);
+    glVertex2f(x, y + 100);
     glEnd();
     glDisable(GL_TEXTURE_2D);
 }
