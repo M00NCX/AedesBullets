@@ -24,7 +24,7 @@ void mouse(int button, int state, int x, int y)
 void keyboard(unsigned char key, int x, int y)
 {
     std::cout << "Key pressed: " << key << std::endl;
-    float distance = 10.0f; // Distance the character will move
+    float distance = 7.0f; // Distance the character will move
     auto& character = Game::getInstance().getCharacter();
     auto& map = Game::getInstance().getMap();
 
@@ -57,7 +57,7 @@ void init()
 {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluOrtho2D(0, 800, 0, 600);
+    gluOrtho2D(0, 812, 0, 588);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glClearColor(1.0, 1.0, 1.0, 1.0); // Fundo branco
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-    glutInitWindowSize(800, 600);
+    glutInitWindowSize(812, 588);
     glutCreateWindow("Aedes Combat: Viagem pelas estacoes.");
 
     init();

@@ -43,6 +43,7 @@ void Game::render()
     case GameState::PLAY:
         gameScreen.render();
         character.render(0);
+        map.loadMap("./src/Fase2.txt");
         mosquito.render(0); // Renderizar o personagem na pose 0 (ajustar conforme necessário)
         break;
     case GameState::HELP:

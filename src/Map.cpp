@@ -71,11 +71,11 @@ bool Map::checkCollisionWithMap(float x, float y) const {
 }
 
 int Map::getWidth() const {
-    return mapWidth;
+    return mapWidth * blockSize;
 }
 
 int Map::getHeight() const {
-    return mapHeight;
+    return mapHeight * blockSize;
 }
 
 BlockType Map::getBlockType(int x, int y) const {
