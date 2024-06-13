@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Character.h"
 
 Game::Game() : state(GameState::MENU) {}
 
@@ -18,10 +19,28 @@ void Game::setState(GameState newState)
         mosquito.resetPosition();
 
         mosquito.setVisible(true);
+
+        mosquito1.resetPosition();
+
+        mosquito1.setVisible(true);
+
+        mosquito2.resetPosition();
+
+        mosquito2.setVisible(true);
+
+        mosquito3.resetPosition();
+
+        mosquito3.setVisible(true);
     }
     else
     {
         mosquito.setVisible(false);
+
+        mosquito1.setVisible(false);
+
+        mosquito2.setVisible(false);
+
+        mosquito3.setVisible(false);
     }
 }
 
@@ -48,8 +67,12 @@ void Game::render()
         gameScreen.render();
         character.render(0);
         map.loadMap("./src/Fase2.txt");
-        mosquito.render(0); // Renderizar o personagem na pose 0 (ajustar conforme necessário)
+        mosquito.render(0); 
+        mosquito2.render(0);
+        mosquito3.render(0);
+        mosquito1.render(0);// Renderizar o personagem na pose 0 (ajustar conforme necessário)
         // Verifica colisão entre mosquito e personagem
+        character.renderProjectiles();
         if (mosquito.checkCollision(character.getX(), character.getY(), character.getWidth(), character.getHeight()))
         {
             // Houve colisão, o personagem perde uma vida
@@ -115,6 +138,7 @@ void Game::render()
             glPopMatrix();
             glMatrixMode(GL_MODELVIEW);
         }
+        
         break;
     case GameState::HELP:
         helpScreen.render();
@@ -126,6 +150,11 @@ void Game::render()
         break;
     case GameState::GAMEOVER:
         gameOverScreen.render(); // Renderizar o fundo do jogo
+        // Aqui, adicione a renderização do menu de pausa
+        // pauseMenu.render();
+        break;
+    case GameState::WINNER:
+        winnerScreen.render(); // Renderizar o fundo do jogo
         // Aqui, adicione a renderização do menu de pausa
         // pauseMenu.render();
         break;
@@ -191,7 +220,28 @@ Mosquito &Game::getMosquito()
     return mosquito;
 }
 
+Mosquito1 &Game::getMosquito1()
+{
+    return mosquito1;
+}
+
+Mosquito2 &Game::getMosquito2()
+{
+    return mosquito2;
+}
+
+Mosquito3 &Game::getMosquito3()
+{
+    return mosquito3;
+}
+
 GameState Game::getState() const
 {
     return state;
+}
+
+void Game::update() {
+    if (state == GameState::PLAY) {
+        character.updateProjectiles();
+    }
 }

@@ -1,7 +1,7 @@
-#include "Mosquito.h"
+#include "Mosquito1.h"
 #include <iostream>
 
-Mosquito::Mosquito() : spriteSheet("./img/mosquito.png"), x(700), y(100), visible(false), direction(-1)
+Mosquito1::Mosquito1() : spriteSheet("./img/mosquito.png"), x(100), y(350), visible(false), direction(-1)
 {
     srand(static_cast<unsigned int>(time(0))); // Inicializa o gerador de números aleatórios
     initialX = x;
@@ -9,7 +9,7 @@ Mosquito::Mosquito() : spriteSheet("./img/mosquito.png"), x(700), y(100), visibl
 }
 
 
-void Mosquito::render(int pose)
+void Mosquito1::render(int pose)
 {
     if (!visible)
         return; // Se o mosquito não estiver visível, não renderiza
@@ -36,7 +36,7 @@ void Mosquito::render(int pose)
     glDisable(GL_TEXTURE_2D);
 }
 
-void Mosquito::movimentacao()
+void Mosquito1::movimentacao()
 {
     if (!visible)
         return; // Se o mosquito não estiver visível, não se move
@@ -60,12 +60,12 @@ void Mosquito::movimentacao()
     }
 }
 
-void Mosquito::setVisible(bool visible)
+void Mosquito1::setVisible(bool visible)
 {
     this->visible = visible;
 }
 
-bool Mosquito::checkCollision(float x, float y, float width, float height)
+bool Mosquito1::checkCollision(float x, float y, float width, float height)
 {
     // Dimensões da imagem do mosquito (ajustar conforme necessário)
     float mosquitoWidth = 20.0f;
@@ -90,7 +90,7 @@ bool Mosquito::checkCollision(float x, float y, float width, float height)
     return collisionX && collisionY;
 }
 
-void Mosquito::resetPosition()
+void Mosquito1::resetPosition()
 {
     x = initialX;
     y = initialY;

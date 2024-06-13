@@ -9,9 +9,13 @@
         [[build\.objs\aedes_combat\windows\x64\release\src\Map.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito1.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito2.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito3.cpp.obj]],
         [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Shot.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]
+        [[build\.objs\aedes_combat\windows\x64\release\src\Projectile.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\WinnerScreen.cpp.obj]]
     },
     values = {
         [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\link.exe]],

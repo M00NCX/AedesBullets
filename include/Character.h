@@ -4,6 +4,8 @@
 #include <GL/gl.h>
 #include "Texture.h"
 #include "Map.h"
+#include "Projectile.h"
+#include <vector>
 
 class Character
 {
@@ -37,6 +39,11 @@ public:
     void resetLives(); // Método para reiniciar as vidas do 
     void resetPoints();
 
+    void shoot(); // Método para lançar um projétil
+    void updateProjectiles(); // Atualiza a posição dos projéteis
+    void renderProjectiles(); // Renderiza os projéteis
+    std::vector<Projectile>& getProjectiles(); // Retorna a lista de projéteis // Para obter os projéteis do personagem
+
 private:
     // Sprite sheet texture for the character
     Texture spriteSheet;
@@ -57,6 +64,9 @@ private:
     bool isFoco(float X, float Y, const Map &map);
     int lives;
     int points;
+
+    std::vector<Projectile> projectiles; // Vetor de projéteis
+    bool facingRight; // Nova variável para direção do personagem
 };
 
 #endif // CHARACTER_H

@@ -1,4 +1,5 @@
 #include "Character.h"
+#include "Game.h"
 #include <iostream>
 
 Character::Character() : spriteSheet("./img/Goku2.png"), x(100.0f), y(85.0f), lives(3) {}
@@ -25,6 +26,7 @@ void Character::render(int pose)
     glVertex2f(x, y + height);
     glEnd();
     glDisable(GL_TEXTURE_2D);
+
 }
 
 void Character::moveUp(float distance, const Map &map)
@@ -59,6 +61,7 @@ void Character::moveLeft(float distance, const Map &map)
     if (newX >= 0 && !isCollision(newX, y, map))
     {
         x = newX;
+        facingRight = false;
     }
     else
     {
@@ -72,6 +75,7 @@ void Character::moveRight(float distance, const Map &map)
     if (newX + width <= screenWidth && !isCollision(newX, y, map))
     {
         x = newX;
+        facingRight = true;
     }
     else
     {
@@ -128,4 +132,29 @@ void Character::resetLives()
 
 void Character::resetPoints() {
     points = 0;
+}
+
+void Character::shoot() {
+    projectiles.push_back(Projectile(x + 10, y + 10));
+}
+
+void Character::updateProjectiles() {
+    for (auto& projectile : projectiles) {
+        projectile.update();
+    }
+
+    projectiles.erase(
+        std::remove_if(projectiles.begin(), projectiles.end(), [](Projectile& p) { return p.isOffScreen(); }),
+        projectiles.end()
+    );
+}
+
+void Character::renderProjectiles() {
+    for (auto& projectile : projectiles) {
+        projectile.render();
+    }
+}
+
+std::vector<Projectile>& Character::getProjectiles() {
+    return projectiles;
 }

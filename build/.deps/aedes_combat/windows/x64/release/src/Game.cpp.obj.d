@@ -232,9 +232,14 @@
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\sstream\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\vector\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.39.33519\\\\include\\\\__msvc_bit_utils.hpp\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\projectile.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\mosquito.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\mosquito1.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\mosquito2.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\mosquito3.h\",\
             \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\helpscreen.h\",\
-            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gameoverscreen.h\"\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\gameoverscreen.h\",\
+            \"c:\\\\users\\\\vinic\\\\onedrive\\\\documentos\\\\aedescombat\\\\include\\\\winnerscreen.h\"\
         ],\
         \"ImportedModules\": [],\
         \"ImportedHeaderUnits\": []\

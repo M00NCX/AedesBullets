@@ -1,6 +1,9 @@
 #include <GL/glut.h>
 #include "Game.h"
+#include "Character.h"
 #include <iostream>
+
+Character character;
 
 void display()
 {
@@ -52,6 +55,11 @@ void keyboard(unsigned char key, int x, int y)
     case 'g':
     case 'G':
         character.getPoints(map);
+        break;
+    case 'j':
+    case 'J':
+        character.shoot();
+        break;
     }
     glutPostRedisplay();
 }
@@ -101,6 +109,13 @@ void timer(int value)
     glutTimerFunc(100, timer, 0); // Redefine o temporizador para 100ms
 }
 
+void update(int value) {
+    Game::getInstance().update();
+    character.updateProjectiles();
+    glutTimerFunc(16, update, 0); // Chamar update a cada 16ms (~60fps)
+    glutPostRedisplay();
+}
+
 int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
@@ -116,7 +131,9 @@ int main(int argc, char **argv)
     glutKeyboardFunc(keyboard);   // Adicionar manipulador de teclado
     glutTimerFunc(100, timer, 0); // Inicializa o temporizador para movimentação do mosquito
     glutSpecialFunc(handleSpecialKeyPress); 
+    glutTimerFunc(16, update, 0); // Iniciar o loop de atualização
 
     glutMainLoop();
     return 0;
 }
+
