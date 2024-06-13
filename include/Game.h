@@ -40,7 +40,6 @@ public:
     void render();
     void handleMouseMotion(int x, int y);
     void handleMouseClick(int button, int state, int x, int y);
-    void handleKeyPress(unsigned char key, int x, int y); // Método para tratar teclas de atalho
     Character &getCharacter();
     Mosquito &getMosquito();    // Novo método para acessar o mosquito
     GameState getState() const; // Novo método para acessar o estado do jogo

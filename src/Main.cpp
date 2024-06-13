@@ -56,6 +56,27 @@ void keyboard(unsigned char key, int x, int y)
     glutPostRedisplay();
 }
 
+void handleSpecialKeyPress(int key, int x, int y) {
+    float distance = 7.0f; // Distance the character will move
+    auto& character = Game::getInstance().getCharacter();
+    auto& map = Game::getInstance().getMap();
+
+    switch (key) {
+        case GLUT_KEY_UP:
+            character.moveUp(distance, map);
+            break;
+        case GLUT_KEY_DOWN:
+            character.moveDown(distance, map);
+            break;
+        case GLUT_KEY_LEFT:
+            character.moveLeft(distance, map);
+            break;
+        case GLUT_KEY_RIGHT:
+            character.moveRight(distance, map);
+            break;
+    }
+}
+
 void init()
 {
     glMatrixMode(GL_PROJECTION);
@@ -94,6 +115,7 @@ int main(int argc, char **argv)
     glutMouseFunc(mouse);
     glutKeyboardFunc(keyboard);   // Adicionar manipulador de teclado
     glutTimerFunc(100, timer, 0); // Inicializa o temporizador para movimentação do mosquito
+    glutSpecialFunc(handleSpecialKeyPress); 
 
     glutMainLoop();
     return 0;
