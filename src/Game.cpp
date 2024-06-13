@@ -13,6 +13,7 @@ void Game::setState(GameState newState)
     state = newState;
     if (state == GameState::PLAY)
     {
+        character.resetLives();
         mosquito.setVisible(true);
     }
     else

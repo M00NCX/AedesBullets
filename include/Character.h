@@ -32,6 +32,7 @@ public:
     // Métodos estáticos para obter screenWidth e screenHeight
     static float getScreenWidth();
     static float getScreenHeight();
+    void resetLives(); // Método para reiniciar as vidas do personagem
 
 private:
     // Sprite sheet texture for the character

@@ -101,3 +101,8 @@ void Character::loseLife()
 {
     lives--;
 }
+
+void Character::resetLives()
+{
+    lives = 3; // Defina MAX_LIVES conforme necessário
+}
