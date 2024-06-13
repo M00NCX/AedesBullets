@@ -14,6 +14,8 @@ void Game::setState(GameState newState)
     if (state == GameState::PLAY)
     {
         character.resetLives();
+        mosquito.resetPosition();
+
         mosquito.setVisible(true);
     }
     else

@@ -4,6 +4,8 @@
 Mosquito::Mosquito() : spriteSheet("./img/mosquito.png"), x(700.0f), y(100.0f), visible(false), direction(-1)
 {
     srand(static_cast<unsigned int>(time(0))); // Inicializa o gerador de números aleatórios
+    initialX = x;
+    initialY = y;
 }
 
 void Mosquito::render(int pose)
@@ -85,4 +87,10 @@ bool Mosquito::checkCollision(float x, float y, float width, float height)
     bool collisionY = myBottom >= otherTop && myTop <= otherBottom;
 
     return collisionX && collisionY;
+}
+
+void Mosquito::resetPosition()
+{
+    x = initialX;
+    y = initialY;
 }
