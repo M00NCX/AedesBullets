@@ -10,7 +10,8 @@
 // Enum to represent the types of blocks in the map
 enum class BlockType {
     SOLID,
-    EMPTY
+    EMPTY,
+    FOCO
 };
 
 class Map {
@@ -21,6 +22,9 @@ public:
 
     // Method to check for collision with the map
     bool checkCollisionWithMap(float x, float y) const;
+
+    // Method to check for foco with the map
+    bool checkFocoWithMap(float x, float y) const;
 
     // Get the width of the map in blocks
     int getWidth() const;

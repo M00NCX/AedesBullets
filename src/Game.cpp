@@ -14,6 +14,7 @@ void Game::setState(GameState newState)
     if (state == GameState::PLAY)
     {
         character.resetLives();
+        character.resetPoints();
         mosquito.resetPosition();
 
         mosquito.setVisible(true);
@@ -79,6 +80,32 @@ void Game::render()
             // Posição para renderizar o número de vidas (por exemplo, canto inferior esquerdo)
             glRasterPos2i(10, 20); // Ajuste a posição conforme necessário
             for (const char &c : livesText)
+            {
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c); // Use a fonte desejada
+            }
+
+            glPopMatrix();
+            glMatrixMode(GL_PROJECTION);
+            glPopMatrix();
+            glMatrixMode(GL_MODELVIEW);
+        }
+        // Renderiza o número de pontos na tela
+        {
+            int points = character.showPoints();
+            std::string pointsText = "Pontos: " + std::to_string(points);
+
+            glColor3f(1.0f, 1.0f, 1.0f); // Cor branca
+            glMatrixMode(GL_PROJECTION);
+            glPushMatrix();
+            glLoadIdentity();
+            gluOrtho2D(0, Character::getScreenWidth(), 0, Character::getScreenHeight()); // Ajuste para usar os métodos estáticos
+            glMatrixMode(GL_MODELVIEW);
+            glPushMatrix();
+            glLoadIdentity();
+
+            // Posição para renderizar o número de pontos (por exemplo, canto inferior esquerdo)
+            glRasterPos2i(120, 20); // Ajuste a posição conforme necessário
+            for (const char &c : pointsText)
             {
                 glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, c); // Use a fonte desejada
             }

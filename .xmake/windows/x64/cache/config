@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     options = {
         mode = "release",
         plat = "windows",
@@ -8,4 +9,15 @@
         ["xmake.lua"] = 1718257642
     },
     recheck = false
+=======
+    mtimes = {
+        ["xmake.lua"] = 1718254214
+    },
+    recheck = false,
+    options = {
+        plat = "windows",
+        arch = "x64",
+        mode = "release"
+    }
+>>>>>>> f334cfeec66e6da6d3cbdcf2f6f0e7ad5f6e2f7d
 }
