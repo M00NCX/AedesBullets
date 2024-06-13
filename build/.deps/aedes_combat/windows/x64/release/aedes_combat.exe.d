@@ -1,4 +1,18 @@
 {
+    files = {
+        [[build\.objs\aedes_combat\windows\x64\release\src\Character.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Game.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\GameScreen.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\HelpScreen.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Main.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Map.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\MosquitoManager.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Shot.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]
+    },
     values = {
         [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe]],
         {
@@ -17,19 +31,5 @@
             "advapi32.lib",
             "opengl32.lib"
         }
-    },
-    files = {
-        [[build\.objs\aedes_combat\windows\x64\release\src\Character.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Game.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\GameScreen.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\HelpScreen.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Main.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Map.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\MosquitoManager.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Shot.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]
     }
 }

@@ -1,4 +1,7 @@
 {
+    files = {
+        [[src\Map.cpp]]
+    },
     depfiles_cl_json = "{\
     \"Version\": \"1.1\",\
     \"Data\": {\
@@ -117,9 +120,6 @@
         \"ImportedHeaderUnits\": []\
     }\
 }",
-    files = {
-        [[src\Map.cpp]]
-    },
     values = {
         [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\cl.exe]],
         {

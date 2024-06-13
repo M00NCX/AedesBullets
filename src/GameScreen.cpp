@@ -23,10 +23,10 @@ void GameScreen::render() {
                 // Render a solid block
                 glColor3f(0.0f, 0.0f, 0.0f); // Set color to black for solid blocks
                 glBegin(GL_QUADS);
-                glVertex2f(x * 32, y * 32);
-                glVertex2f((x + 1) * 32, y * 32);
-                glVertex2f((x + 1) * 32, (y + 1) * 32);
-                glVertex2f(x * 32, (y + 1) * 32);
+                glVertex2f(x * 5, y * 5);
+                glVertex2f((x + 1) * 5, y * 5);
+                glVertex2f((x + 1) * 5, (y + 1) * 5);
+                glVertex2f(x * 5, (y + 1) * 5);
                 glEnd();
             }
         }

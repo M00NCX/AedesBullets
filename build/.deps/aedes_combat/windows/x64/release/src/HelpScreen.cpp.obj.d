@@ -1,4 +1,7 @@
 {
+    files = {
+        [[src\HelpScreen.cpp]]
+    },
     depfiles_cl_json = "{\
     \"Version\": \"1.1\",\
     \"Data\": {\
@@ -258,8 +261,5 @@
             "-external:W0",
             [[-external:IC:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
         }
-    },
-    files = {
-        [[src\HelpScreen.cpp]]
     }
 }

@@ -27,8 +27,8 @@ private:
     float x, y;
 
     // Character dimensions (adjust as needed)
-    static constexpr float width = 25.0f;
-    static constexpr float height = 50.0f;
+    static constexpr float width = 35.0f;
+    static constexpr float height = 40.0f;
 
     // Screen dimensions (adjust as needed)
     static constexpr float screenWidth = 800.0f;
