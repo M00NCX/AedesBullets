@@ -1,7 +1,5 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\vinic\.vscode\extensions\tboox.xmake-vscode-2.3.5\assets\explorer.lua]],
-        "xmake ",
         "xmake ",
         "xmake ",
         "xmake ",
@@ -46,6 +44,8 @@
         [[xmake l c:\Users\vinic\.vscode\extensions\tboox.xmake-vscode-2.3.5\assets\config.lua]],
         "xmake ",
         [[xmake lua C:\Users\dry_2\xmake\actions\build\cleaner.lua]],
+        "xmake ",
+        "xmake ",
         "xmake ",
         "xmake ",
         "xmake ",

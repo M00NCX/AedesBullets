@@ -1,4 +1,7 @@
 {
+    files = {
+        [[src\Game.cpp]]
+    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
@@ -199,8 +202,7 @@
             \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\mosquito.h\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\ctime\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\time.h\",\
-            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\helpscreen.h\",\
-            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\mosquitomanager.h\"\
+            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\helpscreen.h\"\
         ],\
         \"ImportedModules\": [],\
         \"ImportedHeaderUnits\": []\
@@ -227,8 +229,5 @@
             "-external:W0",
             [[-external:IC:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]]
         }
-    },
-    files = {
-        [[src\Game.cpp]]
     }
 }

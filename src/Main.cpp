@@ -1,15 +1,11 @@
 #include <GL/glut.h>
 #include "Game.h"
-#include "Mosquito.h"
 #include <iostream>
-
-Mosquito mosquito; // Instância do mosquito
 
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     Game::getInstance().render();
-    mosquito.render(0); // Renderiza o mosquito com a pose 0
     glutSwapBuffers();
 }
 
@@ -50,10 +46,6 @@ void keyboard(unsigned char key, int x, int y)
     case 'D':
         Game::getInstance().getCharacter().moveRight(distance);
         break;
-    case 'p':
-    case 'P':
-        mosquito.setVisible(true); // Torna o mosquito visível
-        break;
     }
     glutPostRedisplay();
 }
@@ -73,7 +65,11 @@ void init()
 
 void timer(int value)
 {
-    mosquito.movimentacao();      // Atualiza a posição do mosquito
+    Game &game = Game::getInstance();
+    if (game.getState() == GameState::PLAY)
+    {
+        game.getMosquito().movimentacao(); // Atualiza a posição do mosquito
+    }
     glutPostRedisplay();          // Redispara a renderização
     glutTimerFunc(100, timer, 0); // Redefine o temporizador para 100ms
 }

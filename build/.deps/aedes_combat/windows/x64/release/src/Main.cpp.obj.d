@@ -1,4 +1,7 @@
 {
+    files = {
+        [[src\Main.cpp]]
+    },
     depfiles_cl_json = "{\
     \"Version\": \"1.2\",\
     \"Data\": {\
@@ -200,7 +203,6 @@
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\ctime\",\
             \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\time.h\",\
             \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\helpscreen.h\",\
-            \"c:\\\\users\\\\dry_2\\\\desktop\\\\jh\\\\aedescombat\\\\include\\\\mosquitomanager.h\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\iostream\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\istream\",\
             \"c:\\\\program files\\\\microsoft visual studio\\\\2022\\\\community\\\\vc\\\\tools\\\\msvc\\\\14.40.33807\\\\include\\\\ostream\",\
@@ -234,9 +236,6 @@
         \"ImportedHeaderUnits\": []\
     }\
 }",
-    files = {
-        [[src\Main.cpp]]
-    },
     values = {
         [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64\cl.exe]],
         {
