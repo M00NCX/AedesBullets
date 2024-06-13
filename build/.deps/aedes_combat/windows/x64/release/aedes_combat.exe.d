@@ -1,26 +1,13 @@
 {
-    files = {
-        [[build\.objs\aedes_combat\windows\x64\release\src\Character.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Game.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\GameScreen.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\HelpScreen.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Main.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\MosquitoManager.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Shot.cpp.obj]],
-        [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]
-    },
     values = {
-        [[C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64\link.exe]],
+        [[C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe]],
         {
             "-nologo",
             "-dynamicbase",
             "-nxcompat",
             "-machine:x64",
-            [[-libpath:C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]],
-            [[-libpath:C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]],
+            [[-libpath:C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]],
+            [[-libpath:C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]],
             "freeglut_static.lib",
             "glu32.lib",
             "glew32s.lib",
@@ -30,5 +17,19 @@
             "advapi32.lib",
             "opengl32.lib"
         }
+    },
+    files = {
+        [[build\.objs\aedes_combat\windows\x64\release\src\Character.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Game.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\GameScreen.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\HelpScreen.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Main.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Map.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Menu.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mosquito.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\MosquitoManager.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Mouse.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Shot.cpp.obj]],
+        [[build\.objs\aedes_combat\windows\x64\release\src\Texture.cpp.obj]]
     }
 }

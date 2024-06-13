@@ -105,6 +105,11 @@ Character &Game::getCharacter()
     return character;
 }
 
+Map &Game::getMap()
+{
+    return map;
+}
+
 Mosquito &Game::getMosquito()
 {
     return mosquito;

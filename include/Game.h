@@ -5,6 +5,7 @@
 #include "GameScreen.h"
 #include "Mouse.h"
 #include "HelpScreen.h"
+#include "Map.h"
 #include "Mosquito.h" // Certifique-se de incluir o cabeçalho correto do Mosquito
 
 enum class GameState
@@ -25,6 +26,7 @@ private:
     Mouse mouse;
     Character character;
     Mosquito mosquito;
+    Map map;
 
     Game();
 
@@ -39,6 +41,7 @@ public:
     Character &getCharacter();
     Mosquito &getMosquito();    // Novo método para acessar o mosquito
     GameState getState() const; // Novo método para acessar o estado do jogo
+    Map &getMap();
 };
 
 #endif // GAME_H

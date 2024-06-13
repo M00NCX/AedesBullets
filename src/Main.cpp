@@ -24,7 +24,10 @@ void mouse(int button, int state, int x, int y)
 void keyboard(unsigned char key, int x, int y)
 {
     std::cout << "Key pressed: " << key << std::endl;
-    float distance = 10.0f; // Distância que o personagem vai se mover
+    float distance = 10.0f; // Distance the character will move
+    auto& character = Game::getInstance().getCharacter();
+    auto& map = Game::getInstance().getMap();
+
     switch (key)
     {
     case 27: // ESC key
@@ -32,19 +35,19 @@ void keyboard(unsigned char key, int x, int y)
         break;
     case 'w':
     case 'W':
-        Game::getInstance().getCharacter().moveUp(distance);
+        character.moveUp(distance, map);
         break;
     case 's':
     case 'S':
-        Game::getInstance().getCharacter().moveDown(distance);
+        character.moveDown(distance, map);
         break;
     case 'a':
     case 'A':
-        Game::getInstance().getCharacter().moveLeft(distance);
+        character.moveLeft(distance, map);
         break;
     case 'd':
     case 'D':
-        Game::getInstance().getCharacter().moveRight(distance);
+        character.moveRight(distance, map);
         break;
     }
     glutPostRedisplay();

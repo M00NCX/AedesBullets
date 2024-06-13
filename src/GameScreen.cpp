@@ -1,7 +1,7 @@
 #include "GameScreen.h"
 #include <iostream>
 
-GameScreen::GameScreen() : background("./img/background_mapa1.jpg") {}
+GameScreen::GameScreen() : background("./img/bg2.png") {}
 
 void GameScreen::render() {
     // Renderiza background
@@ -16,4 +16,19 @@ void GameScreen::render() {
     glEnd();
     glDisable(GL_TEXTURE_2D);
     
+    // Render map over the background
+    for (int y = 0; y < map.getHeight(); ++y) {
+        for (int x = 0; x < map.getWidth(); ++x) {
+            if (map.getBlockType(x, y) == BlockType::SOLID) {
+                // Render a solid block
+                glColor3f(0.0f, 0.0f, 0.0f); // Set color to black for solid blocks
+                glBegin(GL_QUADS);
+                glVertex2f(x * 32, y * 32);
+                glVertex2f((x + 1) * 32, y * 32);
+                glVertex2f((x + 1) * 32, (y + 1) * 32);
+                glVertex2f(x * 32, (y + 1) * 32);
+                glEnd();
+            }
+        }
+    }
 }

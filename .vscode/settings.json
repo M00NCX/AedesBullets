@@ -51,7 +51,11 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "optional": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "string": "cpp",
+        "xstddef": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

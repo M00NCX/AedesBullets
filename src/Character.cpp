@@ -1,49 +1,59 @@
 #include "Character.h"
 #include <iostream>
 
-Character::Character() : spriteSheet("./img/goku.png"), x(0.0f), y(0.0f) {} // Posição inicial centralizada
+Character::Character() : spriteSheet("./img/Goku2.png"), x(100.0f), y(100.0f) {}
 
 void Character::render(int pose) {
-    // Determina as coordenadas de textura para a pose específica
-    float poseWidth = 1.0f;
+    // Assuming the sprite sheet contains multiple poses in a row
+    float poseWidth = 1.0f / 1; // Adjust this to the number of poses
     float poseHeight = 1.0f;
-    float poseOffset = pose * poseWidth;
+    float poseOffsetX = pose * poseWidth;
 
-    // Renderiza a pose específica do personagem
+    // Render the specific pose of the character
     glColor3f(1.0f, 1.0f, 1.0f);
     glEnable(GL_TEXTURE_2D);
     spriteSheet.bind();
     glBegin(GL_QUADS);
-    glTexCoord2f(poseOffset, 1); glVertex2f(x, y);
-    glTexCoord2f(poseOffset + poseWidth, 1); glVertex2f(x + 100, y); // Supondo uma largura de 100 pixels para o personagem
-    glTexCoord2f(poseOffset + poseWidth, 0); glVertex2f(x + 100, y + 200); // Supondo uma altura de 200 pixels para o personagem
-    glTexCoord2f(poseOffset, 0); glVertex2f(x, y + 200);
+    glTexCoord2f(poseOffsetX, 1); glVertex2f(x, y);
+    glTexCoord2f(poseOffsetX + poseWidth, 1); glVertex2f(x + width, y);
+    glTexCoord2f(poseOffsetX + poseWidth, 0); glVertex2f(x + width, y + height);
+    glTexCoord2f(poseOffsetX, 0); glVertex2f(x, y + height);
     glEnd();
     glDisable(GL_TEXTURE_2D);
 }
 
-void Character::moveUp(float distance) {
-    if (y + distance <= 600 - y + 200) {
-        y += distance;
+void Character::moveUp(float distance, const Map& map) {
+    float newY = y + distance;
+    if (newY + height <= screenHeight && !isCollision(x, newY, map)) {
+        y = newY;
     }
 }
 
-void Character::moveDown(float distance) {
-    if (y - distance >= 0) {
-        y -= distance;
+void Character::moveDown(float distance, const Map& map) {
+    float newY = y - distance;
+    if (newY >= 0 && !isCollision(x, newY, map)) {
+        y = newY;
     }
 }
 
-void Character::moveLeft(float distance) {
-    if (x - distance >= 0) {
-        x -= distance;
+void Character::moveLeft(float distance, const Map& map) {
+    float newX = x - distance;
+    if (newX >= 0 && !isCollision(newX, y, map)) {
+        x = newX;
     }
 }
 
-void Character::moveRight(float distance) {
-    if (x + distance <= 900 - x + 400) {
-        x += distance;
+void Character::moveRight(float distance, const Map& map) {
+    float newX = x + distance;
+    if (newX + width <= screenWidth && !isCollision(newX, y, map)) {
+        x = newX;
     }
 }
 
-
+bool Character::isCollision(float newX, float newY, const Map& map) {
+    // Check corners of the character's bounding box
+    return map.checkCollisionWithMap(newX, newY) || 
+           map.checkCollisionWithMap(newX + width, newY) ||
+           map.checkCollisionWithMap(newX, newY + height) ||
+           map.checkCollisionWithMap(newX + width, newY + height);
+}
