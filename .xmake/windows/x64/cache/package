@@ -1,84 +1,84 @@
 {
     stb = {
-        installdir = [[C:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d]],
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d]],
         sysincludedirs = {
-            [[C:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
-            [[C:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]]
+            [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include]],
+            [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\include\stb]]
         },
         version = "2023.12.15",
+        __enabled = true,
+        __requirestr = "stb",
         envs = {
             PATH = {
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\bin]]
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d\bin]]
             }
-        },
-        __enabled = true,
-        __requirestr = "stb"
-    },
-    miniaudio = {
-        installdir = [[C:\Users\dry_2\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4]],
-        sysincludedirs = [[C:\Users\dry_2\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]],
-        version = "0.11.21",
-        envs = {
-            PATH = {
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\bin]]
-            }
-        },
-        __enabled = true,
-        __requirestr = "miniaudio"
+        }
     },
     freeglut = {
-        installdir = [[C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed]],
-        sysincludedirs = [[C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]],
-        license = "MIT",
-        links = {
-            "freeglut_static",
-            "glu32",
-            "opengl32"
-        },
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed]],
+        static = true,
         defines = {
             "FREEGLUT_STATIC=1",
             "FREEGLUT_LIB_PRAGMAS=0"
         },
-        linkdirs = [[C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]],
-        envs = {
-            PATH = {
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\bin]],
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\c\cmake\3.29.2\3fae25d52b0e4efeb85d002af641b2f4\bin]],
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glu\latest\b1caf5aecf3447d1bfaf66081135de32\bin]],
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\o\opengl\latest\b1caf5aecf3447d1bfaf66081135de32\bin]]
-            }
-        },
-        version = "v3.4.0",
+        __enabled = true,
         syslinks = {
             "gdi32",
             "winmm",
             "user32",
             "advapi32"
         },
-        static = true,
-        libfiles = [[C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib\freeglut_static.lib]],
-        __enabled = true,
-        __requirestr = "freeglut"
-    },
-    glew = {
-        installdir = [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242]],
-        sysincludedirs = [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]],
+        links = {
+            "freeglut_static",
+            "glu32",
+            "opengl32"
+        },
+        license = "MIT",
+        sysincludedirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\include]],
+        __requirestr = "freeglut",
+        version = "v3.4.0",
+        linkdirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib]],
+        libfiles = [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\lib\freeglut_static.lib]],
         envs = {
             PATH = {
-                [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\bin]]
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed\bin]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\c\cmake\3.29.2\ae2ca291915949809139117c15e1db8a\bin]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glu\latest\b1caf5aecf3447d1bfaf66081135de32\bin]],
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\o\opengl\latest\b1caf5aecf3447d1bfaf66081135de32\bin]]
             }
-        },
-        libfiles = [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib\glew32s.lib]],
-        linkdirs = [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]],
-        links = "glew32s",
-        version = "2.2.0",
-        syslinks = "opengl32",
+        }
+    },
+    miniaudio = {
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4]],
+        sysincludedirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\include]],
+        version = "0.11.21",
+        __enabled = true,
+        __requirestr = "miniaudio",
+        envs = {
+            PATH = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4\bin]]
+            }
+        }
+    },
+    glew = {
+        installdir = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242]],
         static = true,
         defines = {
             "GLEW_NO_GLU",
             "GLEW_STATIC"
         },
         __enabled = true,
-        __requirestr = "glew"
+        syslinks = "opengl32",
+        links = "glew32s",
+        sysincludedirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\include]],
+        libfiles = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib\glew32s.lib]],
+        version = "2.2.0",
+        linkdirs = [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\lib]],
+        __requirestr = "glew",
+        envs = {
+            PATH = {
+                [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242\bin]]
+            }
+        }
     }
 }

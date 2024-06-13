@@ -1,10 +1,10 @@
 {
     packages = {
-        [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glu\latest\b1caf5aecf3447d1bfaf66081135de32]],
-        [[C:\Users\dry_2\AppData\Local\.xmake\packages\o\opengl\latest\b1caf5aecf3447d1bfaf66081135de32]],
-        [[C:\Users\dry_2\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed]],
-        [[C:\Users\dry_2\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d]],
-        [[C:\Users\dry_2\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4]],
-        [[C:\Users\dry_2\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242]]
+        [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glu\latest\b1caf5aecf3447d1bfaf66081135de32]],
+        [[C:\Users\Lucas\AppData\Local\.xmake\packages\o\opengl\latest\b1caf5aecf3447d1bfaf66081135de32]],
+        [[C:\Users\Lucas\AppData\Local\.xmake\packages\f\freeglut\v3.4.0\9e1e9a63d6b948868b158c0a7189e4ed]],
+        [[C:\Users\Lucas\AppData\Local\.xmake\packages\s\stb\2023.12.15\1e9afa0be82a4afeaeaa89283f7b4e4d]],
+        [[C:\Users\Lucas\AppData\Local\.xmake\packages\m\miniaudio\0.11.21\08eaa467bf644effb19c903e8c4ac2d4]],
+        [[C:\Users\Lucas\AppData\Local\.xmake\packages\g\glew\2.2.0\6a8fc1e310a44318beb712a418386242]]
     }
 }
