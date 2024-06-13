@@ -15,6 +15,7 @@ enum class BlockType {
 
 class Map {
 public:
+
     // Method to load a map from a file
     void loadMap(const std::string& filename);
 
@@ -39,7 +40,7 @@ private:
     int mapHeight = 0;
 
     // Size of each block (assumed to be a square)
-    static constexpr int blockSize = 5; // Adjust this size as needed
+    static constexpr int blockSize = 14; // Adjust this size as needed
 };
 
 #endif // MAP_H

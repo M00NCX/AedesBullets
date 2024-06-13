@@ -1,7 +1,7 @@
 #include "Character.h"
 #include <iostream>
 
-Character::Character() : spriteSheet("./img/Goku2.png"), x(100.0f), y(100.0f) {}
+Character::Character() : spriteSheet("./img/Goku2.png"), x(100.0f), y(110.0f) {}
 
 void Character::render(int pose) {
     // Assuming the sprite sheet contains multiple poses in a row

@@ -27,12 +27,12 @@ private:
     float x, y;
 
     // Character dimensions (adjust as needed)
-    static constexpr float width = 35.0f;
-    static constexpr float height = 40.0f;
+    static constexpr float width = 15.0f;
+    static constexpr float height = 20.0f;
 
     // Screen dimensions (adjust as needed)
-    static constexpr float screenWidth = 800.0f;
-    static constexpr float screenHeight = 600.0f;
+    static constexpr float screenWidth = 812.0f;
+    static constexpr float screenHeight = 588.0f;
 
     // Helper function to check collision with the map
     bool isCollision(float newX, float newY, const Map& map);

@@ -14,7 +14,7 @@ Menu::Menu() :
 
 void Menu::render() {
     // Renderiza background (tamanho original)
-    renderTexture(background, 0, 0, 800, 600);
+    renderTexture(background, 0, 0, 812, 588);
 
     // Renderiza logo (aumentando o tamanho para 300x150)
     renderTexture(logo, 150, 345, 500, 250);

@@ -14,9 +14,9 @@ void HelpScreen::render() {
     background.bind();
     glBegin(GL_QUADS);
     glTexCoord2f(0, 1); glVertex2f(0, 0);
-    glTexCoord2f(1, 1); glVertex2f(800, 0);
-    glTexCoord2f(1, 0); glVertex2f(800, 600);
-    glTexCoord2f(0, 0); glVertex2f(0, 600);
+    glTexCoord2f(1, 1); glVertex2f(812, 0);
+    glTexCoord2f(1, 0); glVertex2f(812, 588);
+    glTexCoord2f(0, 0); glVertex2f(0, 588);
     glEnd();
     
     // Renderiza o botão de voltar (ajuste para 300x150)
