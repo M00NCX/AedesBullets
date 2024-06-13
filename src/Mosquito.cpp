@@ -24,11 +24,11 @@ void Mosquito::render(int pose)
     glTexCoord2f(poseOffset, 1);
     glVertex2f(x, y);
     glTexCoord2f(poseOffset + poseWidth, 1);
-    glVertex2f(x + 50, y); // Supondo uma largura de 100 pixels para o personagem
+    glVertex2f(x + 50, y);
     glTexCoord2f(poseOffset + poseWidth, 0);
-    glVertex2f(x + 50, y + 100); // Supondo uma altura de 200 pixels para o personagem
+    glVertex2f(x + 50, y + 50);
     glTexCoord2f(poseOffset, 0);
-    glVertex2f(x, y + 100);
+    glVertex2f(x, y + 50);
     glEnd();
     glDisable(GL_TEXTURE_2D);
 }
@@ -39,7 +39,7 @@ void Mosquito::movimentacao()
         return; // Se o mosquito não estiver visível, não se move
 
     // Gera um deslocamento aleatório no intervalo [-10, 10]
-    float deltaX = direction * (rand() % 11); // Randômico entre 0 e 10
+    float deltaX = direction * (rand() % 20); // Randômico entre 0 e 10
 
     // Atualiza a posição do mosquito
     x += deltaX;
@@ -60,4 +60,29 @@ void Mosquito::movimentacao()
 void Mosquito::setVisible(bool visible)
 {
     this->visible = visible;
+}
+
+bool Mosquito::checkCollision(float x, float y, float width, float height)
+{
+    // Dimensões da imagem do mosquito (ajustar conforme necessário)
+    float mosquitoWidth = 20.0f;
+    float mosquitoHeight = 20.0f;
+
+    // Limites do mosquito na tela
+    float myLeft = this->x;
+    float myRight = this->x + mosquitoWidth;
+    float myTop = this->y;
+    float myBottom = this->y + mosquitoHeight;
+
+    // Limites do outro objeto (por exemplo, personagem)
+    float otherLeft = x;
+    float otherRight = x + width;
+    float otherTop = y;
+    float otherBottom = y + height;
+
+    // Verifica colisão nas coordenadas X e Y
+    bool collisionX = myRight >= otherLeft && myLeft <= otherRight;
+    bool collisionY = myBottom >= otherTop && myTop <= otherBottom;
+
+    return collisionX && collisionY;
 }

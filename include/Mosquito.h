@@ -9,9 +9,10 @@ class Mosquito
 {
 public:
     Mosquito();
-    void render(int pose);         // Renderiza o personagem com a pose especificada
-    void movimentacao();           // Atualiza a posição do mosquito
-    void setVisible(bool visible); // Define se o mosquito está visível ou não
+    void render(int pose);                                            // Renderiza o personagem com a pose especificada
+    void movimentacao();                                              // Atualiza a posição do mosquito
+    void setVisible(bool visible);                                    // Define se o mosquito está visível ou não
+    bool checkCollision(float x, float y, float width, float height); // Declaração da função
 
 private:
     Texture spriteSheet; // Textura contendo todas as poses do personagem

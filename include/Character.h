@@ -5,7 +5,8 @@
 #include "Texture.h"
 #include "Map.h"
 
-class Character {
+class Character
+{
 public:
     // Constructor to initialize the character
     Character();
@@ -14,10 +15,23 @@ public:
     void render(int pose);
 
     // Methods to move the character
-    void moveUp(float distance, const Map& map);
-    void moveDown(float distance, const Map& map);
-    void moveLeft(float distance, const Map& map);
-    void moveRight(float distance, const Map& map);
+    void moveUp(float distance, const Map &map);
+    void moveDown(float distance, const Map &map);
+    void moveLeft(float distance, const Map &map);
+    void moveRight(float distance, const Map &map);
+    bool checkCollision(float otherX, float otherY, float otherWidth, float otherHeight);
+    void loseLife();
+
+    // Getters
+    float getX() const { return x; }
+    float getY() const { return y; }
+    float getWidth() const { return width; }
+    float getHeight() const { return height; }
+    int getLives() const { return lives; }
+
+    // Métodos estáticos para obter screenWidth e screenHeight
+    static float getScreenWidth();
+    static float getScreenHeight();
 
 private:
     // Sprite sheet texture for the character
@@ -35,7 +49,8 @@ private:
     static constexpr float screenHeight = 588.0f;
 
     // Helper function to check collision with the map
-    bool isCollision(float newX, float newY, const Map& map);
+    bool isCollision(float newX, float newY, const Map &map);
+    int lives;
 };
 
 #endif // CHARACTER_H
